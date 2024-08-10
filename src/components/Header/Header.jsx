@@ -1,5 +1,7 @@
+ //Componnets Imports
  import React from 'react'
  import  HeaderImage from '../../assets/header_image.avif'
+ //CSS imports
  import './Header.css'
  
  
