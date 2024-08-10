@@ -5,9 +5,13 @@ import Item from '../Item/Item'
     return(
         <div className='shopping-items-wrapper'>
         {
-            shoppingItems.map(item=>{
+           shoppingItems && shoppingItems.map(item=>{
                 return 
-                <Item/>
+                <Item
+                itemName={item.name}
+                quantity={quantity.id}
+                key={item.id}
+                />
             }
 
             )
