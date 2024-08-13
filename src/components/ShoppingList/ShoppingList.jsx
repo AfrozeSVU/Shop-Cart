@@ -1,24 +1,53 @@
-import React from 'react'
-import Header from '../Header/Header'
+import React, { useReducer } from 'react';
+import Header from '../Header/Header';
 import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
- //CSS imports
- import './ShoppingList.css'
+import { ToastContainer } from 'react-toastify';
+import './ShoppingList.css';
+import 'react-toastify/dist/ReactToastify.css';
 
-const shoppingItems =[
-    {id:1 , name:'Apple', quantity:2},
-    {id:2, name:'Banana', quantity:1}
-]
-const ShoppingList = () => {
-  return (
-    <>  <Header></Header>
-    <div className='current-shopping-list'>
-       <InputItem/>
-       <ItemList
-       shoppingItems={shoppingItems}/>
-    </div>
-   </>
-  )
+
+
+//reducer imports
+import ItemReducer from '../../reducers/itemreducer';
+
+function ShoppingList() {
+  // const [shoppingItems, setShoppingItems] = useState([]); // Correctly initializing the state
+ const [shoppingItems, dispatch]= useReducer(ItemReducer, []);
+
+function handleAddItem(name){
+  dispatch({
+    type: 'add_item',
+    itemName: name
+  })
+}
+function handleAddQuantity(id){
+  dispatch({
+    type: 'increment_item',
+    itemId: id 
+  })
+}function handleDecQuantity(id){
+  dispatch({
+    type: 'decrement_item',
+    itemId: id 
+  })
 }
 
-export default ShoppingList
+  return (
+    <>
+       
+      <ToastContainer />
+      <div className='current-shopping-list'>
+
+        <InputItem addItem={handleAddItem} />
+        <ItemList 
+        shoppingItems={shoppingItems} 
+        addQuantity={handleAddQuantity}
+        decQuantity={handleDecQuantity}
+        />
+      </div>
+    </>
+  );
+}
+
+export default ShoppingList;

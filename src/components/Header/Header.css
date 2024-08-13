@@ -1,4 +1,4 @@
-   
+/*    
  
  .header-wrapper {
     display: flex;
@@ -21,4 +21,134 @@
 .header-image {
     max-width: 100%;
     max-height: 100%;
+} */
+
+
+.home-title {
+    font-size: 3.5rem;
+    margin-top: 5rem;
+    letter-spacing: 1rem;
 }
+
+.category-title {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+
+
+.category-list {
+    margin-top: 3rem;
+    gap: 1rem;
+}
+
+.category-item {
+    border: 1px solid var(--pale-blue);
+    box-shadow: 4px 4px 2px var(--mid-gray);
+    width: 150px;
+    background-color: var(--jean-blue);
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    min-height: 100px;
+    min-width: 135px;
+}
+
+.category-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+   
+}
+
+.category-item:hover {
+    box-shadow: 0px 0px;
+    transition: box-shadow 0.15s linear 0s;
+}
+
+:root {
+    --blue-gray: #ecf0f1;
+    --pale-blue: #2c3e50;
+    --mid-gray: #999;
+    --jean-blue: #3b5875;
+    --light-blue: #95afc0;
+    --sky-blue: #dff9fb;
+    --dark-sky-blue: #c7ecee;
+    --light-gray: #ccc;
+}
+
+html {
+    box-sizing: border-box;
+ 
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+#header {
+    background-color: var(--blue-gray);
+    padding: 1.25rem 0;
+}
+
+#header .header-wrapper .logo {
+    font-size: 1.35rem;
+    line-height: 1.5;
+}
+
+#header .header-wrapper .logo a {
+    color: black;
+    letter-spacing: 5px;
+}
+
+#header .header-wrapper .user-actions {
+    font-size: 1rem;
+    line-height: 1.5;
+    gap: 1rem;
+}
+
+#header .header-wrapper .user-actions .logout-btn {
+    cursor: pointer;
+    margin-left: 1.5rem;
+}
+
+#header .header-wrapper .user-actions a {
+    color: black;
+    text-decoration: none;
+}
+
+#header .header-wrapper .user-actions a:hover {
+    text-decoration-line: underline;
+}
+
+.clear-filter {
+    margin-top: 1rem;
+}
+
+.price-filter .price-filter-select > div {
+    margin-bottom: 0.5rem;
+}
+
+.cart, 
+.user-intro, 
+.logout-btn {
+    font-weight: bold; /* Make text bold */
+    font-size: 1.2rem; /* Adjust the font size */
+    cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+    transition: color 0.3s ease, transform 0.3s ease; /* Add transitions for smooth hover effect */
+}
+
+.cart:hover, 
+.user-intro:hover, 
+.logout-btn:hover {
+    color: var(--primary-color); /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge the text on hover */
+}
+
+.logo {
+    font-size: 2rem; /* Set the font size */
+    font-family:  sans-serif; /* Choose a font family */
+     letter-spacing: 2px; /* Add some spacing between letters */
+    text-transform: uppercase; /* Transform text to uppercase */
+}
+
+ 
