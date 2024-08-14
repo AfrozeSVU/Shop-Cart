@@ -3,7 +3,6 @@
 
 Welcome to the Shop Cart website! This is a dynamic e-commerce platform built with React.js, allowing you to easily browse, select, and manage products. Enjoy a seamless shopping experience with features like product management, cart functionalities, and user authentication.
 
-**Checkout working Project:** https://afrozesvu.github.io/Shop-Cart/
 Features
 **Product Selection:**
 
